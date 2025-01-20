@@ -7,4 +7,4 @@
 #sesuaikan database di env
 #composer update
 #php artisan key:generate
-#php artisan serve
+#php artisan serve-098
