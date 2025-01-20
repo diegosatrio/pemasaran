@@ -23,14 +23,14 @@ return new class extends Migration
 
         Schema::create('job_batches', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->string('name');
-            $table->integer('total_jobs');
-            $table->integer('pending_jobs');
-            $table->integer('failed_jobs');
-            $table->longText('failed_job_ids');
-            $table->mediumText('options')->nullable();
-            $table->integer('cancelled_at')->nullable();
-            $table->integer('created_at');
+            $table->string('member_id');
+            $table->integer('karyawan_id');
+            $table->integer('produk_id');
+            $table->integer('tanggal_sewa');
+            $table->longText('harga');
+            $table->mediumText('status')->nullable();
+            $table->integer('pembayaran')->nullable();
+            $table->integer('kode_transaksi');
             $table->integer('finished_at')->nullable();
         });
 
