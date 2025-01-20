@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Str;
+use DB;
 class MembersSeeder extends Seeder
 {
     /**
@@ -12,9 +13,9 @@ class MembersSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('users')->insert([
-            'name' => Str::random(10),
-            'phone'=> '0839302303',
+        DB::table('members')->insert([
+            'nama' => Str::random(10),
+            'nomor_telepon'=> '0839302303',
             'email' => Str::random(10).'@example.com',
         ]);
     }
